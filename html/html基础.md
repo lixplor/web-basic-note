@@ -126,7 +126,44 @@
     - 内联元素(行内元素): 不会以新行开始显示
         - `<span></span>`: 作为容器, 没有特定含义
         - `<b>`, `<td>`, `<a>`, `<img>`也是内联元素
-
+* 表单
+表单是包含`表单元素`的区域, 表单元素是允许用户输入内容的元素
+    - `<form></form>`: 表单
+        - `action`属性: 提交动作
+        - `method`属性: http方法
+        - `<input>`: 输入元素, 输入类型由`type`属性定义
+            - `type`属性: 定义输入类型
+                - `text`: 文本域, 大多数浏览器中默认宽度是20个字符
+                - `number`: 数字输入框
+                - `password`: 密码字段, 文本不会明文显示
+                - `radio`: 单选按钮, `name`属性值相同的归为一组
+                - `checkbox`: 复选框, `name`属性值相同的归为一组
+                - `submit`: 提交按钮, 将表单内容提交
+                - `reset`: 重置按钮, 重置表单数据为默认值
+                - `button`: 普通按钮
+                - `range`: 滑块
+                    - `min`: 最小值
+                    - `max`: 最大值
+                    - `value`: 默认值
+                - `list`: 输入框提示列表数据, 与`<datalist>`元素结合
+        - `<datalist></datalist>`: 可下拉的输入框, 选项使用`<option>`定义
+        - `<button type="button"></button>`: 按钮, 与input不同之处在于, button内部可以防止内容, 如文本或图像
+        - `<select></select>`: 下拉选择框
+            - `<optgroup></optgroup>`: 下拉选项分组
+                - `label`属性: 分组名
+            - `<option></option>`: 选项
+                - `value`: 选项值
+        - `<output></output>`: 定义计算结果
+            - `for`属性: 描述计算中使用的元素与计算结果之间的关系
+        - `<textarea></textarea>`: 多行文本域
+        - `<fieldset></fieldset>`: 使用边框包裹内部输入元素
+            - `<legend></legend>`: fieldset的标题
+* 框架
+    - `<iframe></iframe>`: 嵌入其他页面
+        - `src`属性: 其他页面的url
+        - `width`: 框架宽度
+        - `height`: 框架高度
+        - `frameborder`: 框架边框, 值为0没有边框, 1显示边框
 
 
 ```html
@@ -252,7 +289,52 @@
   <dt>自定义列表的上层条目</dt>
   <dd>自定义列表的底层条目</dd>
 </dl>
+
+
+<!-- 表单 -->
+
+<form>
+  文本输入框<input type="text">
+  数字输入框<input type="number">
+  密码输入框<input type="password">
+  <input type="range" min="-50" max="100" value="50">
+  <input type="radio" name="sex" value="male">单选按钮选项Male
+  <input type="radio" name="sex" value="female">单选按钮选项Female
+  <input type="checkbox" name="car" value="ford">Ford
+  <input type="checkbox" name="car" value="benz">Benz
+  <select>
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select>
+  <select>
+    <optgroup label="颜色">
+      <option value="red">红</option>
+      <option value="yellow">黄</option>
+    </optgroup>
+    <optgroup label="数字">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </optgroup>
+  </select>
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="IE">
+    <option value="FireFox">
+  </datalist>
+  <fieldset>
+    <legend>按钮组</field>
+    <input type="button" value="普通按钮">
+    <input type="reset" value="重置按钮">
+    <input type="submit" value="提交按钮">
+  </fieldset>
+</form>
+
+
+<!-- 框架 -->
+
+<iframe src="https:www.baidu.com" frameborder="0"></iframe>
 ```
+
 
 ## head标签
 
