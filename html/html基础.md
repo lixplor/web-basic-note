@@ -164,3 +164,74 @@
 <ins>插入文本</ins>
 
 ```
+
+## head标签
+
+* `<head></head>`: 包含所有的头部标签元素, 可以在其中插入script, css, meta
+* `<title></title>`: 必须有. 定义不同文档的标题
+    - 浏览器工具栏标题
+    - 收藏夹标题
+    - 搜索引擎结果页面的标题
+* `<base>`: HTML文档中所有超链接标签的默认链接
+* `<link>`: 定义文档与外部资源之间的联系
+* `<style></style>`: 定义HTML文档的样式文件引用地址
+* `<meta>`: 定义基本元数据
+    - `charset`: 页面字符集
+    - `name': 属性名
+        - `keywords`: 搜索引擎关键字
+        - `description`: 页面描述
+        - `author`: 页面作者
+* `<script></script>`: 定义脚本文件
+    
+
+
+```html
+// title标签
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8"> 
+  <title>文档标题</title>
+</head>
+<body>
+  文档内容......
+</body>
+</html>
+
+
+// base标签
+<head>
+  <base href="http://www.runoob.com/images/" target="_blank">
+</head>
+<body>
+  <img src="logo.png" />  // 自动使用base标签中的地址
+</body>
+
+
+// link标签
+<head>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+
+// style标签
+<head>
+  <style type="text/css">
+    body {
+      background-color:yellow;
+    }
+  </style>
+</head>
+
+
+// meta标签
+<meta name="keywords" content="搜索引擎关键字, 用逗号分隔">
+<meta name="description" content="页面内容描述">
+<meta name="author" content="网页作者信息">
+<meta http-equiv="refresh" content="30">每30秒刷新页面
+
+
+// script标签
+<script type="text/javascript">
+  var js = runJs();
+</script> 
