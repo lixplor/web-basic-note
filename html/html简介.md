@@ -81,3 +81,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
+
+
+## HTML样式-CSS
+
+* 3种方式将CSS添加到HTML中
+    - 内联样式: 在html元素中增加`style`属性
+    - 内部样式表: 在html文档头部`<head>`中增加`<style>`元素来包含CSS
+    - 外部引用: 在html文档头部`<head>`中增加`<link>`, 加载外部CSS文件
+
+```html
+// 内联样式
+<p style="color:blue;margin-left:20px;">This is a paragraph.</p>
+
+// 内部样式表
+<head>
+  <style type="text/css">
+    body {
+      color:#000;
+    }
+  </style>
+</head>
+
+// 外部样式表
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+```
