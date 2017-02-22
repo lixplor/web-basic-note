@@ -38,5 +38,31 @@
         - `border-box`: 默认, 绘制在边界框内
         - `padding-box`: 绘制在填充框内
         - `content-box`: 绘制在内容框内 
+* 渐变
+    - `linear-gradient`: 线性渐变
+        - direction
+            - `to left`
+            - `to right`
+            - `to top left`
+            - `to bottom right`
+        - angle
+            - xxdeg
+        - color-stop1
+        - color-stop2
+        - ...
+    - `radial-gradient`: 径向渐变
+        - shape
+            - `circlr`: 圆形
+            - `ellipse`: 椭圆形
+        - shape-size
+            - `closest-side`
+            - `farthest-side`
+            - `closest-corner`
+            - `farthest-corner`
+        - start-color
+        - ...
+        - last-color
+    - `repeating-linear-gradient`: 重复线性渐变
+    - `repeating-radial-gradient`: 重负径向渐变
 
 
