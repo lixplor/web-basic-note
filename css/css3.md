@@ -64,5 +64,95 @@
         - last-color
     - `repeating-linear-gradient`: 重复线性渐变
     - `repeating-radial-gradient`: 重负径向渐变
-
+* 文本效果
+    - `text-overflow`: 文本溢出时的处理
+        - `clip`: 修剪文本
+        - `ellipsis`: 显示省略符号来代表被修剪的文本
+        - 字符串: 使用指定字符串代表被修剪的文本
+    - `text-shadow`: 向文本添加阴影
+        - 水平阴影位置: 必须, 可以为负值
+        - 垂直阴影位置: 必须, 可以为负值
+        - 模糊距离
+        - 阴影颜色
+    - `word-break`: 非中日韩文本的换行规则
+        - `normal`: 使用浏览器默认的换行规则
+        - `break-all`: 允许在单词内换行
+        - `keep-all`: 只能在半角空格或连字符处换行
+    - `word-wrap`: 允许对长的不可分割的单词进行分割, 并换行到下一行
+        - `normal`: 浏览器默认
+        - `break-word`: 在长单词或url地址内部进行换行
+* 字体
+CSS3允许浏览器下载所需字体进行显示, 不再仅限于web-safe字体
+    - `@font-face`
+        - font-family: 必须, 字体名称
+        - src: 必须, 字体文件的url
+        - font-stretch: 字体如何拉伸
+            - `normal`: 默认
+            - `condensed`
+            - `ultra-condensed`
+            - `extra-condensed`
+            - `semi-condensed`
+            - `expanded`
+            - `semi-expanded`
+            - `extra-expanded`
+            - `ultra-expanded`
+        - font-style: 字体样式
+            - `normal`:默认
+            - `italic`
+            - `oblique`
+        - font-weight`: 字重, 即粗细
+            - `normal`
+            - `bold`
+            - `100~900`
+        - `unicode-range`: 字体支持的UNICODE字符范围, 默认`U+0~10FFFF`
+* 2D转换
+    - `transform`: 2D或3D转换
+    - `transform-origin`: 更改转换元素的位置
+    - 2D转换方法
+        - `matrix(n, n, n, n, n, n)`: 使用6个值的矩阵定义2D转换
+        - `translate(x, y)`: 沿着x和y轴平移元素
+        - `translateX(n)`: 沿着x轴平移元素
+        - `translateY(n)`: 沿着y轴平移元素
+        - `scale(x, y)`: 缩放宽和高
+        - `scaleX(n)`: 缩放宽度
+        - `scaleY(n)`: 缩放高度
+        - `rotate(angle)`: 旋转角度
+        - `skew(x-angle, y-angle)`: 倾斜
+        - `skewX(angle)`: 沿着x轴倾斜
+        - `skewY(angle)`: 沿着y轴倾斜
+* 3D转换
+    - `transform`: 2D或3D转换
+    - `transform-origin`: 更改转换元素的位置
+    - `transform-style`: 规定被嵌套元素如何在3D空间中显示
+    - `perspective`: 规定3D元素的透视效果
+    - `perspective-origin`: 规定3D元素的底部位置
+    - `backface-visibility`: 定义元素在不面对屏幕时是否可见
+    - 3D转换方法
+        - `matrix3d(n, n, n, n, n, n, ...n): 16个值的4x4矩阵定义3D转换
+        - `translate3d(x, y, z)`: 定义3D转换
+        - `translateX(x)`: x轴平移
+        - `translateY(y)`: y轴平移
+        - `translateZ(z)`: z轴平移
+        - `scale3d(x, y, z)`: 缩放
+        - `scaleX(x)`: x轴缩放
+        - `scaleY(y)`: y轴缩放
+        - `scaleZ(z)`: z轴缩放
+        - `rotate3d(x, y, z, angle)`: 3D旋转
+        - `rotateX(angle)`: x轴旋转
+        - `rotateY(angle)`: y轴旋转
+        - `rotateZ(angle)`: z轴旋转
+        - `perspective(n)`: 透视
+* 过渡
+将某种样式转换为另一种样式, 无需使用Flash或JS
+    - 使用方式
+        - 指定样式
+        - 指定时间
+    - 多项动画
+        - `样式 时间, 样式 时间, ..., 样式 时间;`
+    - 属性
+        - `transition`: 简写属性, 同时设置四个过度属性
+        - `transition-property`: 过渡的css属性名称
+        - `transition-duration`: 效果时间, 默认0
+        - `transition-timing-function`: 过度效果时间曲线, 默认ease
+        - `transition-delay`: 开始前的延迟, 默认0
 
