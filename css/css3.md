@@ -155,4 +155,64 @@ CSS3允许浏览器下载所需字体进行显示, 不再仅限于web-safe字体
         - `transition-duration`: 效果时间, 默认0
         - `transition-timing-function`: 过度效果时间曲线, 默认ease
         - `transition-delay`: 开始前的延迟, 默认0
+* 动画
+    - `@keyframes 选择器 {动画属性}`: 将动画绑定到选择器中
+        - `animation`: 动画属性简写, 除`animation-play-state`
+        - `animation-name`: 定义动画名称
+        - `animation-duration`: 动画时间, 默认0
+        - `animation-timing-function`: 规定动画的速度曲线, 默认`ease`
+        - `animation-delay`: 动画开始前延迟时间, 默认0
+        - `animation-iteration-count`: 动画播放次数, 默认1
+        - `animation-direction`: 动画是否在下一周期逆向播放, 默认`normal`
+        - `animation-play-state`: 动画是否正在运行或暂停, 默认`running`
+* 多列布局
+    - `column-count`: 元素被分割的列数
+    - `column-fill`: 填充列的方式
+    - `column-gap`: 列与列之间的间隙
+    - `column-rule`: 所有`column-rule-xxx`的属性简写
+    - `column-rule-color`: 两列间边框的颜色
+    - `column-rule-style`: 两列间边框的样式
+    - `column-rule-width`: 两列间边框的厚度
+    - `column-span`: 元素跨越多少列
+    - `column-width`: 列的宽度
+    - `columns`: 设置column-width和column-count的简写
+* 用户界面
+    - `box-sizing`: 适应区域
+    - `outline-offset`: 外轮廓修饰并绘制超出边框的边缘
+    - `resize`: 指定一个元素是否由用户调整大小
+* 弹性盒子(Flex box)
+CSS3的一种新的布局模式, 用于适应不同屏幕大小的布局方式
+    - `flex-direction`: 容器中元素排列方式
+        - `row`
+        - `row-reverse`
+        - `column`
+        - `column-reverse`
+    - `justify-content`: 元素在主轴(横轴)的对齐方式
+        - `flex-start`: 默认, 位于容器开头
+        - `flex-end`: 位于容器结尾
+        - `center`: 位于容器中心
+        - `space-between`: 各行之间等距空白, 不包括开头结尾
+        - `space-around`: 各行之间等距空白, 包括开头结尾
+    - `align-items`: 元素在次轴(纵轴)的对齐方式
+        - `stretch`: 默认, 条目被拉伸以适应容器
+        - `center`: 位于容器中心
+        - `flex-start`: 位于容器开头
+        - `flex-end`: 位于容器结尾
+        - `baseline`: 位于容器基线上
+    - `flex-wrap`: 子元素超出容器时是否换行
+        - `nowrap`: 默认, 不换行
+        - `wrap`: 换行
+        - `wrap-reverse`: 以相反顺序换行
+    - `align-content`: 修改flex-wrap属性的行为为类似align-items, 设置行的对齐
+        - 同align-items
+    - `flex-flow`: flex-direction和flex-wrap的简写
+    - `order`: 元素排列顺序
+    - `align-self`: 子元素在次轴方向的对齐方式
+        - 同align-items
+    - `flex`: 子元素如何分配空间
+        - `flex-grow`: 扩展
+        - `flex-shrink`: 收缩
+        - `flex-basis`: 长度
+        - `auto`
+        - `none`
 
