@@ -215,4 +215,20 @@ CSS3的一种新的布局模式, 用于适应不同屏幕大小的布局方式
         - `flex-basis`: 长度
         - `auto`
         - `none`
-
+* 多媒体查询
+用于查询媒体设备的信息
+    - `@media`
+        - 格式: 
+            - `@media not|only mediatype and (expressions) { css; }`
+            - `<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">` 
+        - 表达式可以包含多个, 表达式根据条件是否成立返回true或false
+            - 如果指定的多媒体类型匹配设备类型, 则查询结果返回true, 会在匹配的设备上显示指定样式效果
+        - 操作符: 
+            - `not`: 不是某些媒体类型
+            - `only`: 只能使某种媒体类型
+            - `all`: 所有设备都允许
+        - 媒体类型:
+            - `all`: 所有多媒体类型设备
+            - `print`: 打印机
+            - `screen`: 电脑屏幕, 平板, 智能手机等
+            - `speech`: 屏幕阅读器
