@@ -27,8 +27,8 @@
         - `href`: 链接地址
             - `#id`则可以跳转到本页中指定id位置. 如果没有该属性, 则该链接不可以点击
             - `mailto:name@email.com?cc=抄送地址&bcc=暗送地址&subject=邮件标题&body=邮件正文`: 电子邮箱超链接, 点击会打开系统邮件客户端. 空格用`%20`代替以保证链接不会被空格断开
-        - `target`: 定义文档在何处显示. 
-            - `_blank`:在新窗口打开. 
+        - `target`: 定义文档在何处显示.
+            - `_blank`:在新窗口打开.
             - `_top`: 跳出frame
 * 图像
     - `<img src="图像地址" alt="替换文本"/>`
@@ -348,20 +348,22 @@
 * `<style></style>`: 定义HTML文档的样式文件引用地址
 * `<meta>`: 定义基本元数据
     - `charset`: 页面字符集
-    - `name': 属性名
+    - `name`: 属性名
         - `keywords`: 搜索引擎关键字
         - `description`: 页面描述
         - `author`: 页面作者
+    - `http-equiv`: 响应头的键
+    - `content`: 响应头的值
 * `<script></script>`: 定义脚本文件
-    
+
 
 
 ```html
 // title标签
 <!DOCTYPE html>
 <html>
-<head> 
-  <meta charset="utf-8"> 
+<head>
+  <meta charset="utf-8">
   <title>文档标题</title>
 </head>
 <body>
@@ -405,4 +407,4 @@
 // script标签
 <script type="text/javascript">
   var js = runJs();
-</script> 
+</script>
